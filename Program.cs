@@ -7,7 +7,7 @@ using System.Text;
 namespace MergeSort
 {
     class Program
-    { 
+    {         
         static Hashtable ht = new Hashtable();
         static Queue<int> queue = new Queue<int>();
         public int FindMatrixClusters(int[,] array)
@@ -28,7 +28,7 @@ namespace MergeSort
         {
             if(ht.ContainsKey(index))
                 return;
-
+            
             ht.Add(index, index);
 
             for(int j =  0; j < array.GetLength(1); j++)
