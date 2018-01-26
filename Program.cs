@@ -17,16 +17,9 @@ namespace MergeSort
             {
                 if(ht.ContainsKey(i))
                    continue;
-         /*       for(int j = 0; j < array.GetLength(1); j++)
-                {
-                    if(i == j)
-                        continue;
-                    if(array[i, j] == 1 && !ht.ContainsKey(j))
-                    {
-         */              SearchClusters(array, i);
-         /*           }    
-                }
-         */       NumOfClusters++;
+  
+                SearchClusters(array, i);
+                NumOfClusters++;
             }
             return NumOfClusters;
         }
@@ -53,36 +46,6 @@ namespace MergeSort
                 int i = queue.Dequeue();
                 SearchClusters(array, i);
             }    
-        }
-        int[] Merge(int[] left, int[] right)
-        {
-            int [] num = new int[left.Length + right.Length];
-            int LeftPtr = 0, RightPtr = 0, numPtr = 0;
-            while (LeftPtr < left.Length || RightPtr < right.Length)
-            {
-                if (LeftPtr == left.Length)
-                {
-                    num[numPtr] = right[RightPtr];
-                    RightPtr++;
-                }
-                else if (RightPtr == right.Length)
-                {
-                    num[numPtr] = left[LeftPtr];
-                    LeftPtr++;
-                }
-                else if (left[LeftPtr] <= right[RightPtr])
-                {
-                    num[numPtr] = left[LeftPtr];
-                    LeftPtr++;
-                }
-                else
-                {
-                    num[numPtr] = right[RightPtr];
-                    RightPtr++;
-                }
-                numPtr++;
-            }
-            return num;
         }
  
         static void Main(string[] args)
