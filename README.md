@@ -6,3 +6,5 @@
 * ## CONSTRAINTS: ##
     1) Diagonal values within the input array will all be 1s as an entity is related to itself. <br />
     2) Entry(i, j) = Entry(j, i), where i is not equal to j.
+
+* Breadth First Search traversal is used to solve the above problem 
