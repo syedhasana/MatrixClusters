@@ -4,5 +4,5 @@
 * If an entity is not related to any other given entities, it will form its own cluster.
 * In this problem, the input consists of 2 dimensional matrix. The dimension represents the number of entities. The value '1' means the corresponding indices are related.
 * ## CONSTRAINTS: ##
-    1 Diagonal values within the input array will all be 1s as an entity is related to itself. <br />
-    2 Entry(i, j) = Entry(j, i), where i is not equal to j.
+    1) Diagonal values within the input array will all be 1s as an entity is related to itself. <br />
+    2) Entry(i, j) = Entry(j, i), where i is not equal to j.
